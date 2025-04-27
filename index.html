@@ -71,7 +71,7 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: Georgia, serif;
             scroll-behavior: smooth;
             transition: background-color 0.5s ease, color 0.3s ease;
         }
@@ -328,7 +328,7 @@
                     </div>
                 </div>
                 <div class="md:w-2/3 md:pl-12 animate-on-scroll" style="transition-delay: 0.1s">
-                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <h3 class="text-2xl font-semibold mb-4 ">Who am I?</h3>
                     <p class="text-muted-light dark:text-muted-dark mb-6 leading-relaxed">
                         I'm a passionate frontend developer and always creating modern web applications. 
                         I specialize in React, JavaScript and responsive design. My goal is to build intuitive, 
@@ -373,85 +373,90 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-on-scroll">My <span class="gradient-text">Projects</span></h2>
             <p class="text-muted-light dark:text-muted-dark text-center max-w-2xl mx-auto mb-12 animate-on-scroll">Here are some of my recent projects. Each one was carefully crafted to solve specific problems and deliver value.</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
-                    <div class="relative overflow-hidden h-48">
-                        <img src="images/ott.png" alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-                            <span class="text-xs px-2 py-1 rounded-full bg-accent-light dark:bg-accent-dark text-white">Featured</span>
+            <div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                        <div class="relative overflow-hidden h-48">
+                            <img src="images/ott.png" alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                                <span class="text-xs px-2 py-1 rounded-full bg-accent-light dark:bg-accent-dark text-white">Featured</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Ott Platform</h3>
+                            <p class="text-muted-light dark:text-muted-dark mb-4">Designed an OTT platform with user-friendly features and optimized performance.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">React Js</span>
+                            </div>
+                            <a href="https://prime-video-clone-pink.vercel.app/" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                                View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Ott Platform</h3>
-                        <p class="text-muted-light dark:text-muted-dark mb-4">Designed an OTT platform with user-friendly features and optimized performance.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">React Js</span>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300" style="transition-delay: 0.1s">
+                        <div class="relative overflow-hidden h-48">
+                            <img src="images/to-do.png" alt="Project 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <a href="https://prime-video-clone-pink.vercel.app/" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
-                            View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">To-do Application</h3>
+                            <p class="text-muted-light dark:text-muted-dark mb-4">Designed an intuitive interface that made task management easier and more efficient.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">HTML</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">CSS</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            </div>
+                            <a href="https://todoapp2612.ccbp.tech/" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                                View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300" style="transition-delay: 0.2s">
+                        <div class="relative overflow-hidden h-48">
+                            <img src="images/Food.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Food E-Commerce Application</h3>
+                            <p class="text-muted-light dark:text-muted-dark mb-4">Built a web application that improved user engagement and browsing experience.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">HTML</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">CSS3</span>
+                            </div>
+                            <a href="#" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                                View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300" style="transition-delay: 0.1s">
-                    <div class="relative overflow-hidden h-48">
-                        <img src="images/to-do.png" alt="Project 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">To-do Application</h3>
-                        <p class="text-muted-light dark:text-muted-dark mb-4">Designed an intuitive interface that made task management easier and more efficient.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">HTML</span>
-                            <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">CSS</span>
-                            <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                <div id="hiddenProjects" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+                    <!-- Project 4 -->
+                    <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300" style="transition-delay: 0.3s">
+                        <div class="relative overflow-hidden h-48">
+                            <img src="images/portfolio.png" alt="Project 4" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         </div>
-                        <a href="https://todoapp2612.ccbp.tech/" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
-                            View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Personal Portfolio</h3>
+                            <p class="text-muted-light dark:text-muted-dark mb-4">A customizable portfolio for creatives with dark/light mode and animated sections.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">HTML5</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">CSS3</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            </div>
+                            <a href="#" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                                View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300" style="transition-delay: 0.2s">
-                    <div class="relative overflow-hidden h-48">
-                        <img src="images/Food.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Food E-Commerce Application</h3>
-                        <p class="text-muted-light dark:text-muted-dark mb-4">Built a web application that improved user engagement and browsing experience.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">HTML</span>
-                            <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">CSS3</span>
-                        </div>
-                        <a href="#" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
-                            View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
-                    </div>
+                <div class="flex justify-center mt-8">
+                    <button id="toggleProjectsBtn" class="btn-primary px-6 py-3 rounded-lg font-medium hover:glow">
+                        View All
+                    </button>
                 </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300" style="transition-delay: 0.3s">
-                    <div class="relative overflow-hidden h-48">
-                        <img src="images/portfolio.png" alt="Project 4" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Personal Portfolio</h3>
-                        <p class="text-muted-light dark:text-muted-dark mb-4">A customizable portfolio for creatives with dark/light mode and animated sections.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">HTML5</span>
-                            <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">CSS3</span>
-                            <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">JavaScript</span>
-                        </div>
-                        <a href="#" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
-                            View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                
-               
             </div>
             
             
@@ -582,93 +587,107 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script>
-        // Mobile Menu Toggle
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-links').classList.remove('active');
+        <script>
+            // Mobile Menu Toggle
+            document.querySelector('.hamburger').addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.toggle('active');
             });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    document.querySelector('.nav-links').classList.remove('active');
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Back to top button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Animate on scroll
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            
+            function checkScroll() {
+                animateElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Initial check
+            checkScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkScroll);
+            
+            // Form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
                 
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                // Here you would typically send the form data to a server
+                // For this example, we'll just show an alert
+                alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+                
+                // Reset form
+                this.reset();
+            });
+
+            // Toggle View All / View Less for projects
+            const toggleProjectsBtn = document.getElementById('toggleProjectsBtn');
+            const hiddenProjects = document.getElementById('hiddenProjects');
+
+            toggleProjectsBtn.addEventListener('click', () => {
+                if (hiddenProjects.classList.contains('hidden')) {
+                    hiddenProjects.classList.remove('hidden');
+                    toggleProjectsBtn.textContent = 'View Less';
+                } else {
+                    hiddenProjects.classList.add('hidden');
+                    toggleProjectsBtn.textContent = 'View All';
                 }
             });
-        });
-        
-        // Back to top button
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.remove('opacity-100', 'visible');
-                backToTopButton.classList.add('opacity-0', 'invisible');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Animate on scroll
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-        
-        function checkScroll() {
-            animateElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('visible');
-                }
-            });
-        }
-        
-        // Initial check
-        checkScroll();
-        
-        // Check on scroll
-        window.addEventListener('scroll', checkScroll);
-        
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            // For this example, we'll just show an alert
-            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
-            
-            // Reset form
-            this.reset();
-        });
 
         // Resume download
         document.querySelector('a[download]').addEventListener('click', function(e) {
