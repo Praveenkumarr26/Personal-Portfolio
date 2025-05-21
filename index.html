@@ -243,6 +243,168 @@
         .dark .glow {
             box-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
         }
+
+        /* Timeline styles */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 10px;
+        }
+
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: var(--accent);
+            border: 4px solid var(--primary);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--primary);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--primary);
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--primary);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--primary) transparent transparent;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--card);
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-container::before {
+                left: 60px;
+                border: medium solid var(--primary);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--primary) transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+
+        /* Certificate card styles */
+        .certificate-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .certificate-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dark .certificate-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Skill icon styles */
+        .skill-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .skill-icon i {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .dark .skill-icon i {
+            color: var(--primary-dark);
+        }
+
+        .skill-icon span {
+            font-size: 0.875rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body class="bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark">
@@ -261,6 +423,9 @@
                     <div class="nav-links hidden md:flex space-x-8">
                         <a href="#home" class="nav-link font-medium text-text-light dark:text-text-dark">Home</a>
                         <a href="#about" class="nav-link font-medium text-text-light dark:text-text-dark">About</a>
+                        <a href="#skills" class="nav-link font-medium text-text-light dark:text-text-dark">Skills</a>
+                        <a href="#education" class="nav-link font-medium text-text-light dark:text-text-dark">Education</a>
+                        <a href="#certificates" class="nav-link font-medium text-text-light dark:text-text-dark">Certificates</a>
                         <a href="#projects" class="nav-link font-medium text-text-light dark:text-text-dark">Projects</a>
                         <a href="#contact" class="nav-link font-medium text-text-light dark:text-text-dark">Contact</a>
                     </div>
@@ -336,21 +501,6 @@
                         web technologies. I'm always eager to learn and take on new challenges.
                     </p>
                     
-                    <div class="mb-8">
-                        <h4 class="text-xl font-semibold mb-4">My Skills</h4>
-                        <div class="flex flex-wrap">
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Responsive Design</span>
-                            <span class="skill-tag">REST APIs</span>
-                        </div>
-                    </div>
-                    
                     <div class="flex flex-wrap gap-4">
                         <a href="https://drive.google.com/file/d/1xcYdlRgqcrTvJ_19VKQDr5fKpOYXswz9/view?usp=drive_link" download="Praveen_Resume.pdf" class="btn-accent text-white px-6 py-3 rounded-lg font-medium inline-flex items-center">
                             <i class="fas fa-download mr-2"></i> View Resume
@@ -364,8 +514,280 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-background-light dark:bg-background-dark transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 animate-on-scroll">My <span class="gradient-text">Skills</span></h2>
+            
+            <div class="flex flex-wrap justify-center animate-on-scroll">
+                <!-- HTML5 -->
+                <div class="skill-icon">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                
+                <!-- CSS3 -->
+                <div class="skill-icon">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                
+                <!-- JavaScript -->
+                <div class="skill-icon">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                
+                <!-- JavaScript -->
+                <div class="skill-icon">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </div>
+                
+                <!-- React -->
+                <div class="skill-icon">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                
+                <!-- Node.js -->
+                <div class="skill-icon">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+                
+                <!-- Git -->
+                <div class="skill-icon">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+                
+                <!-- GitHub -->
+                <div class="skill-icon">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+                
+                <!-- Bootstrap -->
+                <div class="skill-icon">
+                    <i class="fab fa-bootstrap"></i>
+                    <span>Bootstrap</span>
+                </div>
+                
+                <!-- Database -->
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+                
+                <!-- Responsive Design -->
+                <div class="skill-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Responsive</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-card-light dark:bg-card-dark transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 animate-on-scroll">My <span class="gradient-text">Education</span></h2>
+            
+            <div class="timeline animate-on-scroll">
+                <!-- Education Item 1 -->
+                <div class="timeline-container left">
+                    <div class="timeline-content bg-card-light dark:bg-card-dark">
+                        <h3 class="text-xl font-semibold mb-2">Bachelor's Degree in Computer Science</h3>
+                        <p class="text-muted-light dark:text-muted-dark mb-2">Satya Institute of Technology And Management</p>
+                        <p class="text-muted-light dark:text-muted-dark">Specialized in Computer Science and Engineering</p>
+                    </div>
+                </div>
+                
+                <!-- Education Item 2 -->
+                <div class="timeline-container right">
+                    <div class="timeline-content bg-card-light dark:bg-card-dark">
+                        <h3 class="text-xl font-semibold mb-2">Intermediate Education</h3>
+                        <p class="text-muted-light dark:text-muted-dark mb-2">Sri Chaitanya Junior College</p>
+                        <p class="text-muted-light dark:text-muted-dark">Focus on Mathematics, Physics, and Chemistry</p>
+                    </div>
+                </div>
+                
+                <!-- Education Item 3 -->
+                <div class="timeline-container left">
+                    <div class="timeline-content bg-card-light dark:bg-card-dark">
+                        <h3 class="text-xl font-semibold mb-2">School Education</h3>
+                        <p class="text-muted-light dark:text-muted-dark mb-2">Gurajada School</p>
+                        <p class="text-muted-light dark:text-muted-dark">Foundation in Science and Mathematics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-background-light dark:bg-background-dark transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-on-scroll">My <span class="gradient-text">Certificates</span></h2>
+            <p class="text-muted-light dark:text-muted-dark text-center max-w-2xl mx-auto mb-12 animate-on-scroll">Certifications that validate my skills and knowledge in various technologies.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certificate 1 -->
+                <div class="certificate-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/certificates/AI.png" alt="AI" class="w-cover h-cover object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
+                        <p class="text-muted-light dark:text-muted-dark mb-4">Computer Ethics, Artificial Intelligence, Generative AI.</p>
+                        <a href="https://www.linkedin.com/learning/certificates/28960603d4f3e9b49113fa29893ff6799ce147ee9ffa60e016bc245719ea353f?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bi4id2q9DRXuDRv4hGVvyOg%3D%3D" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                            View Certificate <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="certificate-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/certificates/Deloitte.png" alt="Deloitte" class="w-cover h-cover object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Data Analytics Job Simulation By Deloitte</h3>
+                        <p class="text-muted-light dark:text-muted-dark mb-4">Data Modelling, Data Analysis, Tableau.</p>
+                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_6mP3KRPHYpNzBwFvq_1745657087595_completion_certificate.pdf" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                            View Certificate <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="certificate-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/certificates/aws.png" alt="aws" class="w-cover h-cover object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Solutions Architecture Job Simulation By AWS</h3>
+                        <p class="text-muted-light dark:text-muted-dark mb-4">Architecture Diagram, AWS Pricing.</p>
+                        <a href="https://certificates.ccbp.in/intensive/programming-foundations?id=SDXBRAZUXH" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                            View Certificate <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>    
+            </div>
+            
+            <div id="hiddenCertificates" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+
+            <!-- Certificate 4 -->
+            <div class="certificate-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="images/certificates/Python.png" alt="Python" class="w-cover h-cover object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Programming Foundations with Python</h3>
+                    <p class="text-muted-light dark:text-muted-dark mb-4">Python.</p>
+                    <a href="https://certificates.ccbp.in/intensive/programming-foundations?id=SDXBRAZUXH" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                        View Certificate <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Certificate 5 -->
+            <div class="certificate-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="images/certificates/javascript.png" alt="Python" class="w-cover h-cover object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">JavaScript Essentials</h3>
+                    <p class="text-muted-light dark:text-muted-dark mb-4">Javascript Concepts including ES6+.</p>
+                    <a href="https://certificates.ccbp.in/intensive/javascript-essentials?id=FLLBNFAUEG" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                        View Certificate <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 6 -->
+            <div class="certificate-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="images/certificates/React.png" alt="Python" class="w-cover h-cover object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">React Js - Getting Started</h3>
+                    <p class="text-muted-light dark:text-muted-dark mb-4">React Js.</p>
+                    <a href="https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/certificates/share/JIUANLEKFO.png" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                        View Certificate <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 7 -->
+            <div class="certificate-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="images/certificates/cloud.png" alt="Python" class="w-cover h-cover object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Fundamentals of Cloud Computing</h3>
+                    <p class="text-muted-light dark:text-muted-dark mb-4">Cloud Computing.</p>
+                    <a href="https://upgrad.certificate.givemycertificate.com/c/4d9585c6-2c21-42a4-b547-2e1d8d2b4beb" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                        View Certificate <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 8 -->
+            <div class="certificate-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="images/certificates/foundations.png" alt="Python" class="w-cover h-cover object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Developer Foundations</h3>
+                    <p class="text-muted-light dark:text-muted-dark mb-4">Git, Commad Line.</p>
+                    <a href="https://certificates.ccbp.in/intensive/developer-foundations?id=EAXKMMRPBD" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                        View Certificate <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 9 -->
+            <div class="certificate-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="images/certificates/sql.png" alt="Python" class="w-cover h-cover object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Introduction to Databases</h3>
+                    <p class="text-muted-light dark:text-muted-dark mb-4">SQL.</p>
+                    <a href="https://certificates.ccbp.in/intensive/introduction-to-databases?id=DGGWIYFEXX" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                        View Certificate <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 10 -->
+            <div class="certificate-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="images/certificates/node.png" alt="Python" class="w-cover h-cover object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Node JS</h3>
+                    <p class="text-muted-light dark:text-muted-dark mb-4">Node Js.</p>
+                    <a href="https://certificates.ccbp.in/intensive/node-js?id=BDUKYQSYVH" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                        View Certificate <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+                
+                
+        </div>
+            
+            <div class="flex justify-center mt-8">
+                <button id="toggleCertificatesBtn" class="btn-primary px-6 py-3 rounded-lg font-medium hover:glow">
+                    View All Certificates
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-background-light dark:bg-background-dark transition-colors duration-300">
+    <section id="projects" class="py-20 bg-card-light dark:bg-card-dark transition-colors duration-300">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-on-scroll">My <span class="gradient-text">Projects</span></h2>
             <p class="text-muted-light dark:text-muted-dark text-center max-w-2xl mx-auto mb-12 animate-on-scroll">Here are some of my recent projects. Each one was carefully crafted to solve specific problems and deliver value.</p>
@@ -375,7 +797,7 @@
                     <!-- Project 1 -->
                     <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300">
                         <div class="relative overflow-hidden h-48">
-                            <img src="images/ott.png" alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                            <img src="images/project/ott.png" alt="Project 1" class="w-cover h-cover object-cover transition-transform duration-500 hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                                 <span class="text-xs px-2 py-1 rounded-full bg-accent-light dark:bg-accent-dark text-white">Featured</span>
                             </div>
@@ -395,7 +817,7 @@
                     <!-- Project 2 -->
                     <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300" style="transition-delay: 0.1s">
                         <div class="relative overflow-hidden h-48">
-                            <img src="images/to-do.png" alt="Project 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                            <img src="images/project/to-do.png" alt="Project 2" class="w-cover h-cover object-cover transition-transform duration-500 hover:scale-110">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">To-do Application</h3>
@@ -414,7 +836,7 @@
                     <!-- Project 3 -->
                     <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300" style="transition-delay: 0.2s">
                         <div class="relative overflow-hidden h-48">
-                            <img src="images/Food.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                            <img src="images/project/Food.png" alt="Project 3" class="w-cover h-cover object-cover transition-transform duration-500 hover:scale-110">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">Food E-Commerce Application</h3>
@@ -433,7 +855,7 @@
                     <!-- Project 4 -->
                     <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300" style="transition-delay: 0.3s">
                         <div class="relative overflow-hidden h-48">
-                            <img src="images/portfolio.png" alt="Project 4" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                            <img src="images/project/portfolio.png" alt="Project 4" class="w-cover h-cover object-cover transition-transform duration-500 hover:scale-110">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">Personal Portfolio</h3>
@@ -443,7 +865,26 @@
                                 <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">CSS3</span>
                                 <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">JavaScript</span>
                             </div>
-                            <a href="#" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                            <a href="https://personal-portfolio-ql55.vercel.app/" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
+                                View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card bg-card-light dark:bg-card-dark rounded-lg overflow-hidden animate-on-scroll transition-colors duration-300" style="transition-delay: 0.3s">
+                        <div class="relative overflow-hidden h-48">
+                            <img src="images/project/wikipedia.png" alt="Project 4" class="w-cover h-cover object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Wikipedia Application</h3>
+                            <p class="text-muted-light dark:text-muted-dark mb-4">A responsive Wikipedia search application that delivers instant results with a clean, user-friendly interface.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">HTML5</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">CSS3</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            </div>
+                            <a href="https://wikipedia-application-psi.vercel.app/" class="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center">
                                 View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
                             </a>
                         </div>
@@ -455,13 +896,11 @@
                     </button>
                 </div>
             </div>
-            
-            
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-card-light dark:bg-card-dark transition-colors duration-300">
+    <section id="contact" class="py-20 bg-background-light dark:bg-background-dark transition-colors duration-300">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-on-scroll">Get In <span class="gradient-text">Touch</span></h2>
             <p class="text-muted-light dark:text-muted-dark text-center max-w-2xl mx-auto mb-12 animate-on-scroll">Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
@@ -483,7 +922,7 @@
                         </div>
                         <div>
                             <label for="message" class="block text-text-light dark:text-text-dark mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="contact-input w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none bg-white dark:bg-gray-8dark:text-text-dark" required></textarea>
+                            <textarea id="message" name="message" rows="5" class="contact-input w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none bg-white dark:bg-gray-800 text-text-light dark:text-text-dark" required></textarea>
                         </div>
                         <button type="submit" class="btn-primary text-white px-8 py-3 rounded-lg font-medium w-full hover:glow">
                             Send Message <i class="fas fa-paper-plane ml-2"></i>
@@ -572,6 +1011,9 @@
                 <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
                     <a href="#home" class="text-gray-400 hover:text-white transition">Home</a>
                     <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+                    <a href="#skills" class="text-gray-400 hover:text-white transition">Skills</a>
+                    <a href="#education" class="text-gray-400 hover:text-white transition">Education</a>
+                    <a href="#certificates" class="text-gray-400 hover:text-white transition">Certificates</a>
                     <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
                     <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
                 </div>
@@ -584,107 +1026,121 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-        <script>
-            // Mobile Menu Toggle
-            document.querySelector('.hamburger').addEventListener('click', function() {
-                document.querySelector('.nav-links').classList.toggle('active');
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('active');
             });
-            
-            // Close mobile menu when clicking a link
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function() {
-                    document.querySelector('.nav-links').classList.remove('active');
-                });
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Back to top button
-            const backToTopButton = document.getElementById('backToTop');
-            
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.remove('opacity-0', 'invisible');
-                    backToTopButton.classList.add('opacity-100', 'visible');
-                } else {
-                    backToTopButton.classList.remove('opacity-100', 'visible');
-                    backToTopButton.classList.add('opacity-0', 'invisible');
-                }
-            });
-            
-            backToTopButton.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-            
-            // Animate on scroll
-            const animateElements = document.querySelectorAll('.animate-on-scroll');
-            
-            function checkScroll() {
-                animateElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-                    
-                    if (elementTop < windowHeight - 100) {
-                        element.classList.add('visible');
-                    }
-                });
-            }
-            
-            // Initial check
-            checkScroll();
-            
-            // Check on scroll
-            window.addEventListener('scroll', checkScroll);
-            
-            // Form submission
-            document.getElementById('contactForm').addEventListener('submit', function(e) {
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Get form values
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('message').value;
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
                 
-                // Here you would typically send the form data to a server
-                // For this example, we'll just show an alert
-                alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
-                
-                // Reset form
-                this.reset();
-            });
-
-            // Toggle View All / View Less for projects
-            const toggleProjectsBtn = document.getElementById('toggleProjectsBtn');
-            const hiddenProjects = document.getElementById('hiddenProjects');
-
-            toggleProjectsBtn.addEventListener('click', () => {
-                if (hiddenProjects.classList.contains('hidden')) {
-                    hiddenProjects.classList.remove('hidden');
-                    toggleProjectsBtn.textContent = 'View Less';
-                } else {
-                    hiddenProjects.classList.add('hidden');
-                    toggleProjectsBtn.textContent = 'View All';
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
                 }
             });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Animate on scroll
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        
+        function checkScroll() {
+            animateElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // Initial check
+        checkScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', checkScroll);
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Toggle View All / View Less for projects
+        const toggleProjectsBtn = document.getElementById('toggleProjectsBtn');
+        const hiddenProjects = document.getElementById('hiddenProjects');
+
+        toggleProjectsBtn.addEventListener('click', () => {
+            if (hiddenProjects.classList.contains('hidden')) {
+                hiddenProjects.classList.remove('hidden');
+                toggleProjectsBtn.textContent = 'View Less';
+            } else {
+                hiddenProjects.classList.add('hidden');
+                toggleProjectsBtn.textContent = 'View All';
+            }
+        });
+
+        // Toggle View All / View Less for certificates
+        const toggleCertificatesBtn = document.getElementById('toggleCertificatesBtn');
+        const hiddenCertificates = document.getElementById('hiddenCertificates');
+
+        toggleCertificatesBtn.addEventListener('click', () => {
+            if (hiddenCertificates.classList.contains('hidden')) {
+                hiddenCertificates.classList.remove('hidden');
+                toggleCertificatesBtn.textContent = 'View Less';
+            } else {
+                hiddenCertificates.classList.add('hidden');
+                toggleCertificatesBtn.textContent = 'View All Certificates';
+            }
+        });
 
         // Resume download
         document.querySelector('a[download]').addEventListener('click', function(e) {
