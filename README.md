@@ -105,12 +105,6 @@ Frontend Developer | React Enthusiast
 🔗 [LinkedIn](https://www.linkedin.com/in/praveen-kumar-yellappu/)
 🔗 [GitHub](https://github.com/Praveenkumarr26)
 
----
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-Feel free to fork, modify, and use it for personal or professional use.
 
 ---
 
